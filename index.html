@@ -1334,7 +1334,7 @@
       <table class="desc-table">
         <thead><tr><th>No.</th><th>구분</th><th>상세</th></tr></thead>
         <tbody>
-          <tr><td class="no-cell"><span class="no-badge">0</span></td><td class="gubun-cell">개요</td><td>해당 회원이 청중으로 참가한 행사 이력. 행사 > 프로그램 단위 아코디언 구조. 지식프로필은 프로그램에 종속(같은 행사여도 프로그램마다 다를 수 있음).</td></tr>
+          <tr><td class="no-cell"><span class="no-badge">0</span></td><td class="gubun-cell">개요</td><td>해당 회원이 청중으로 참가한 행사 이력. 행사 > 프로그램 단위 아코디언 구조. 지식프로필은 행사 단위로 관리됨(같은 행사 내 여러 프로그램에 참여해도 프로필은 하나).</td></tr>
           <tr><td class="no-cell"><span class="no-badge">1</span></td><td class="gubun-cell">아코디언 헤더</td><td>행사명(파랑 링크) / 프로그램명 / 주최그룹(링크). 클릭 시 접기/펼치기. 행사명·주최그룹 클릭 시 해당 상세 cross-page 이동.</td></tr>
           <tr><td class="no-cell"><span class="no-badge">2</span></td><td class="gubun-cell">지식프로필</td><td>펼치면 표시. 항목: 소속 / 직업·직위 / 수준 / 관심 분야(★=전문 분야) / 관심 태그 / 자기소개 / 참가 상태.<br><br>관심 분야: 전문 분야를 포함하는 더 넓은 카테고리. ★ 표기로 전문 분야 구분.</td></tr>
           <tr><td class="no-cell"><span class="no-badge">3</span></td><td class="gubun-cell">참가 상태</td><td>자동 승인 행사: 바로 승인 상태. 수동 승인 행사: 승인 / 미승인 / 반려 상태 표시.</td></tr>
@@ -3587,11 +3587,11 @@
                 <span style="font-size:9.5px;color:#718096;">수동 승인: 신청 시 미승인 상태로 시작</span>
               </div>
               <table class="d-table">
-                <thead><tr><th>이름</th><th>이메일</th><th>신청일</th><th>승인 상태</th></tr></thead>
+                <thead><tr><th>이름</th><th>이메일</th><th>신청일</th><th>승인 상태</th><th>지식프로필</th></tr></thead>
                 <tbody>
-                  <tr><td style="color:#4299E1;cursor:pointer;">김수경</td><td style="font-size:9.5px">sukyung.kim@snu.ac.kr</td><td style="font-size:9.5px">2026.02.20</td><td><span class="d-chip d-chip-green">승인</span></td></tr>
-                  <tr><td style="color:#4299E1;cursor:pointer;">이준혁</td><td style="font-size:9.5px">junhyuk@example.com</td><td style="font-size:9.5px">2026.02.22</td><td><span class="d-chip" style="background:#FFF5F5;color:#C53030;">미승인</span></td></tr>
-                  <tr><td style="color:#4299E1;cursor:pointer;">정아름</td><td style="font-size:9.5px">areum.j@example.com</td><td style="font-size:9.5px">2026.03.01</td><td><span class="d-chip d-chip-green">승인</span></td></tr>
+                  <tr><td style="color:#4299E1;cursor:pointer;">김수경</td><td style="font-size:9.5px">sukyung.kim@snu.ac.kr</td><td style="font-size:9.5px">2026.02.20</td><td><span class="d-chip d-chip-green">승인</span></td><td style="color:#2F855A;font-weight:700;cursor:pointer;">Y</td></tr>
+                  <tr><td style="color:#4299E1;cursor:pointer;">이준혁</td><td style="font-size:9.5px">junhyuk@example.com</td><td style="font-size:9.5px">2026.02.22</td><td><span class="d-chip" style="background:#FFF5F5;color:#C53030;">미승인</span></td><td style="color:#CBD5E0;font-weight:700;">N</td></tr>
+                  <tr><td style="color:#4299E1;cursor:pointer;">정아름</td><td style="font-size:9.5px">areum.j@example.com</td><td style="font-size:9.5px">2026.03.01</td><td><span class="d-chip d-chip-green">승인</span></td><td style="color:#2F855A;font-weight:700;cursor:pointer;">Y</td></tr>
                 </tbody>
               </table>
             </div>
@@ -3603,8 +3603,9 @@
     <table class="desc-table"><thead><tr><th>No.</th><th>구분</th><th>상세</th></tr></thead><tbody>
       <tr><td class="no-cell"><span class="no-badge">0</span></td><td class="gubun-cell">개요</td><td>행사 참가 신청자 전체 목록. 행사 목록에서 신청 수 클릭 시 이 탭으로 바로 이동. 참가 유형에 따라 승인 상태 표시 방식이 다름.</td></tr>
       <tr><td class="no-cell"><span class="no-badge">1</span></td><td class="gubun-cell">참가 유형 안내</td><td>자동 승인: "자동 승인: 신청 즉시 승인" 표시, 승인 상태 칩 없음.<br>수동 승인: "수동 승인: 신청 시 미승인 상태로 시작" 표시, 승인/미승인/반려 칩 표시.</td></tr>
-      <tr><td class="no-cell"><span class="no-badge">2</span></td><td class="gubun-cell">테이블</td><td>컬럼: 이름 / 이메일 / 신청일 / 승인 상태. 이름 클릭 시 해당 회원 상세로 cross-page 이동.</td></tr>
+      <tr><td class="no-cell"><span class="no-badge">2</span></td><td class="gubun-cell">테이블</td><td>컬럼: 이름 / 이메일 / 신청일 / 승인 상태 / 지식프로필. 이름 클릭 시 해당 회원 상세로 cross-page 이동.</td></tr>
       <tr><td class="no-cell"><span class="no-badge">3</span></td><td class="gubun-cell">승인 상태</td><td>승인(초록) / 미승인(빨강) / 반려(회색). 슈퍼어드민은 열람만 가능.</td></tr>
+      <tr><td class="no-cell"><span class="no-badge">4</span></td><td class="gubun-cell">지식프로필 컬럼</td><td>참가자가 지식프로필을 등록했는지 여부를 Y/N으로 표시. Y 클릭 시 같은 행사 상세의 <strong>청중 지식프로필</strong> 탭으로 이동하며, 해당 참가자 이름으로 검색된 상태로 전환되어 등록된 프로필 내용을 바로 확인할 수 있음.</td></tr>
     </tbody></table>
     </div><div class="desc-scroll-hint"><span class="desc-scroll-hint-text">scroll</span><div class="desc-scroll-hint-arrow"></div></div></div>
   </div>
@@ -3649,12 +3650,12 @@
                 <div style="padding:5px 10px;font-size:10px;color:#718096;">참가자</div>
                 <div style="padding:5px 10px;font-size:10px;font-weight:700;color:#4299E1;border-bottom:2px solid #4299E1;margin-bottom:-2px;white-space:nowrap;">청중 지식프로필</div>
               </div>
-              <div style="font-size:9.5px;color:#718096;background:#F0F4F5;border-radius:6px;padding:7px 10px;margin-bottom:10px;">청중 네트워킹은 행사 단위로 운영됩니다. 각 참가자의 지식프로필을 확인하세요.</div>
+              <div style="font-size:9.5px;color:#718096;background:#F0F4F5;border-radius:6px;padding:7px 10px;margin-bottom:10px;">청중 네트워킹은 행사 단위로 운영됩니다. 참가자당 지식프로필은 하나이며, 참여한 프로그램과 무관하게 동일하게 적용됩니다.</div>
+              <input style="border:1px solid #CBD5E0;border-radius:5px;padding:4px 8px;font-size:9.5px;width:150px;margin-bottom:10px;display:block;" value="이름 또는 이메일로 검색" readonly>
               <!-- 참가자 카드 -->
               <div class="d-card" style="margin-bottom:8px;">
                 <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
                   <span style="font-weight:600;font-size:10.5px;color:#4299E1;cursor:pointer;">김수경</span>
-                  <span style="font-size:9.5px;color:#718096;">프로그램 A — 기조 강연</span>
                 </div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px 12px;font-size:9.5px;color:#4A5568;line-height:1.7;">
                   <div><span style="color:#718096;">소속</span> 서울대학교 의과대학</div>
@@ -3667,7 +3668,6 @@
               <div class="d-card">
                 <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
                   <span style="font-weight:600;font-size:10.5px;color:#4299E1;cursor:pointer;">이준혁</span>
-                  <span style="font-size:9.5px;color:#718096;">프로그램 A — 기조 강연</span>
                 </div>
                 <div style="font-size:9.5px;color:#718096;font-style:italic;">지식프로필 미등록</div>
               </div>
@@ -3678,10 +3678,11 @@
     </div>
     <div class="desc-section"><h3>Description</h3><div class="desc-content">
     <table class="desc-table"><thead><tr><th>No.</th><th>구분</th><th>상세</th></tr></thead><tbody>
-      <tr><td class="no-cell"><span class="no-badge">0</span></td><td class="gubun-cell">개요</td><td>행사 레벨에서 전체 참가자의 지식프로필 일괄 열람. 청중 네트워킹은 행사 단위로 운영되므로 행사 수준에서 제공. 지식프로필은 프로그램별로 다를 수 있어 소속 프로그램명 함께 표시.</td></tr>
-      <tr><td class="no-cell"><span class="no-badge">1</span></td><td class="gubun-cell">참가자 카드</td><td>이름(링크) + 프로그램명. 펼침 내용: 소속/직업·직위/수준/관심분야(★=전문분야)/관심태그/자기소개.<br>한 참가자가 여러 프로그램 등록 시 각 프로그램 프로필 별도 카드.</td></tr>
+      <tr><td class="no-cell"><span class="no-badge">0</span></td><td class="gubun-cell">개요</td><td>행사 레벨에서 전체 참가자의 지식프로필 일괄 열람. 청중 네트워킹은 행사 단위로 운영되므로, 지식프로필도 참가자당 행사 하나에 하나만 존재(참여 프로그램과 무관).</td></tr>
+      <tr><td class="no-cell"><span class="no-badge">1</span></td><td class="gubun-cell">참가자 카드</td><td>이름(링크) + 지식프로필 내용: 소속/직업·직위/수준/관심분야(★=전문분야)/관심태그/자기소개. 참가자당 카드 1개.</td></tr>
       <tr><td class="no-cell"><span class="no-badge">2</span></td><td class="gubun-cell">이름 링크</td><td>참가자 이름 클릭 시 회원 상세 > 청중 참여 이력 탭 cross-page 이동.</td></tr>
       <tr><td class="no-cell"><span class="no-badge">3</span></td><td class="gubun-cell">미등록</td><td>지식프로필 미등록 참가자는 "지식프로필 미등록" 문구로 표시.</td></tr>
+      <tr><td class="no-cell"><span class="no-badge">4</span></td><td class="gubun-cell">검색</td><td>이름·이메일로 참가자 검색. 참가자 탭의 지식프로필 컬럼 "Y" 클릭 시 이 탭으로 이동하며 해당 참가자 이름이 검색어로 자동 입력됨.</td></tr>
     </tbody></table>
     </div><div class="desc-scroll-hint"><span class="desc-scroll-hint-text">scroll</span><div class="desc-scroll-hint-arrow"></div></div></div>
   </div>
@@ -4923,11 +4924,11 @@ const MOCK_TEMPLATES = [
 ];
 const TMPL_CATEGORIES = ['자료요청 알림발송','등록·제출마감 리마인드','운영 변경 안내','취소 안내','기타'];
 
-const MARKDOWN_CONTENT = `# 서로(Seoro) 슈퍼어드민 기획플랜 (v2.1)
+const MARKDOWN_CONTENT = `# 서로(Seoro) 슈퍼어드민 기획플랜 (v2.2)
 
-> v2.0 + 6차 수정 반영 통합본
+> v2.0 + 7차 수정 반영 통합본
 > 대상: 서비스 기획팀, 개발팀, UX 디자인팀
-> 최종 업데이트: 2026-04-24
+> 최종 업데이트: 2026-07-06
 
 ---
 
@@ -5002,9 +5003,9 @@ KPI 카드 (3개 섹션):
 
 기본 정보 / 소속 호스트그룹 / 청중 참여 이력 / 연사 활동 이력 / 연사 신청 이력 / 네트워킹 이력 / 제재 이력
 
-**청중 참여 이력** (4·5차 수정)
+**청중 참여 이력** (4·5차 수정, 7차 수정)
 - 계층 구조: 행사 > 프로그램 단위로 아코디언 표시
-- 지식프로필은 프로그램에 종속 (같은 행사여도 프로그램마다 다른 프로필 사용 가능)
+- 지식프로필은 **행사 단위로 관리** (같은 행사 내 여러 프로그램에 참여해도 프로필은 하나) (7차 수정)
 - 지식프로필 내 표시 항목: 소속, 직업/직위, 수준, 전문 분야, 관심 분야, 관심 태그, 자기소개
   - 관심 분야: 전문 분야를 포함하는 더 넓은 카테고리. 칩에 ★ 표기로 전문 분야 구분
 
@@ -5062,10 +5063,14 @@ KPI 카드 (3개 섹션):
 
 **프로그램·세션 관리**: 프로그램 카드마다 세션 목록 테이블 표시
 
-**청중 지식프로필** (6차 추가)
-- 청중 네트워킹은 행사 단위로 운영 → 행사 레벨에서 전체 참가자 지식프로필 열람
-- 참가자별 카드: 프로그램명, 소속, 직업/직위, 수준, 관심 분야(★=전문 분야), 관심 태그, 자기소개
-- 한 참가자가 여러 프로그램 등록 시 각 프로그램 프로필 별도 표시
+**참가자** (7차 추가)
+- 컬럼: 이름 / 이메일 / 신청일 / 승인 상태 / 지식프로필(Y/N)
+- Y 클릭 → 청중 지식프로필 탭으로 이동 + 해당 참가자 이름으로 검색된 상태로 전환
+
+**청중 지식프로필** (6차 추가, 7차 수정)
+- 청중 네트워킹은 행사 단위로 운영 → 지식프로필도 참가자당 행사 하나에 하나만 존재 (참여 프로그램과 무관) (7차 수정)
+- 참가자별 카드: 소속, 직업/직위, 수준, 관심 분야(★=전문 분야), 관심 태그, 자기소개 (참가자당 카드 1개)
+- 검색 기능: 이름·이메일로 참가자 검색 (7차 추가)
 
 ---
 
@@ -5096,7 +5101,7 @@ KPI 카드 (3개 섹션):
 카테고리: category_id / icon(lucide) / name / system(bool)
 프로그램: program_id / project_id / name
 세션: session_id / program_id / name / track / type / datetime / speaker_id
-지식프로필: profile_id / account_id / program_id / affiliation / job / level / expert_fields / interest_fields / tags / bio
+지식프로필: profile_id / account_id / event_id / affiliation / job / level / expert_fields / interest_fields / tags / bio
 네트워킹: networking_id / requester_id / receiver_id / status / event_id / program_id
 
 ---
@@ -5780,7 +5785,7 @@ function MembersPage({ preSelectMemberEmail, onClearPreSelect, navigate, navigat
           <div className="card">
             <div className="card-title">
               청중 참여 행사 이력
-              <span style={{fontSize:12,color:'#9CA3AF',fontWeight:400,marginLeft:8}}>행사 · 프로그램별 지식프로필 포함</span>
+              <span style={{fontSize:12,color:'#9CA3AF',fontWeight:400,marginLeft:8}}>행사별 지식프로필 포함</span>
             </div>
             {mockAudienceHistory.map((h, i) => (
               <div key={i} className="accordion-item">
@@ -5815,7 +5820,7 @@ function MembersPage({ preSelectMemberEmail, onClearPreSelect, navigate, navigat
                       </div>
                       <div>
                         <div className="modal-section-title" style={{display:'flex',alignItems:'center',gap:6}}>
-                          이 프로그램에서 사용한 지식프로필
+                          이 행사에서 사용한 지식프로필
                         </div>
                         <div className="field-row"><span className="field-label">소속</span><span className="field-value">{h.knowledgeProfile.affiliation}</span></div>
                         <div className="field-row"><span className="field-label">직업/직위</span><span className="field-value">{h.knowledgeProfile.job}</span></div>
@@ -6529,6 +6534,7 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
   const [eventKeywords, setEventKeywords] = useState(['AI 진단', '의료영상', '딥러닝', '바이오마커', '임상적용', '영상분석', '신경망', '정밀의료']);
   const [eventKeywordEdit, setEventKeywordEdit] = useState(null);
   const [events, setEvents] = useState(MOCK_EVENTS);
+  const [profileSearch, setProfileSearch] = useState('');
 
   useEffect(() => {
     if (preSelectEventId) {
@@ -6611,17 +6617,18 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
 
   const mockParticipants = [
     { name: '김수경', email: 'sukyung@seoro.io', applied: '2026.02.20', status: '승인',
-      profiles: [{ program: '프로그램 A — 기조 강연', affiliation: '서울대학교병원', job: '영상의학과 전문의', level: '전문가', fields: ['AI 진단', '의료영상'], interestFields: ['정밀의료', '딥러닝', 'AI 진단', '의료영상'], tags: ['#의료AI', '#영상분석', '#임상적용'], bio: '영상의학 분야에서 AI 진단 솔루션을 연구하고 있습니다.' }] },
+      profile: { affiliation: '서울대학교병원', job: '영상의학과 전문의', level: '전문가', fields: ['AI 진단', '의료영상'], interestFields: ['정밀의료', '딥러닝', 'AI 진단', '의료영상'], tags: ['#의료AI', '#영상분석', '#임상적용'], bio: '영상의학 분야에서 AI 진단 솔루션을 연구하고 있습니다.' } },
     { name: '이준혁', email: 'junhyuk@example.com', applied: '2026.02.22', status: selected?.type === 'approval' ? '미승인' : '승인',
-      profiles: [{ program: '프로그램 A — 기조 강연', affiliation: '카카오헬스케어', job: 'AI 연구원', level: '중급', fields: ['딥러닝', '바이오마커'], interestFields: ['AI 진단', '딥러닝', '바이오마커', '신경망'], tags: ['#딥러닝', '#헬스케어AI'], bio: '의료 데이터 기반 AI 모델을 개발하고 있습니다.' }] },
+      profile: null },
     { name: '정아름', email: 'areum.j@example.com', applied: '2026.03.01', status: '승인',
-      profiles: [
-        { program: '프로그램 A — 기조 강연', affiliation: '연세대학교', job: '의생명공학 연구원', level: '중급', fields: ['바이오마커'], interestFields: ['바이오마커', '정밀의료', '임상적용'], tags: ['#바이오', '#임상연구'], bio: '바이오마커 발굴 연구를 진행 중입니다.' },
-        { program: '프로그램 B — 워크숍', affiliation: '연세대학교', job: '의생명공학 연구원', level: '입문', fields: [], interestFields: ['데이터처리', '파이프라인', '전처리'], tags: ['#데이터분석', '#파이썬'], bio: '실습 위주로 참여 중입니다.' },
-      ] },
+      profile: { affiliation: '연세대학교', job: '의생명공학 연구원', level: '중급', fields: ['바이오마커'], interestFields: ['바이오마커', '정밀의료', '임상적용', '데이터처리', '파이프라인'], tags: ['#바이오', '#임상연구', '#데이터분석'], bio: '바이오마커 발굴 연구를 진행하며, 실습 위주의 워크숍에도 참여하고 있습니다.' } },
     { name: '박민지', email: 'minji.park@gmail.com', applied: '2026.03.05', status: selected?.type === 'approval' ? '미승인' : '승인',
-      profiles: [{ program: '프로그램 B — 워크숍', affiliation: '네이버헬스', job: '데이터 엔지니어', level: '중급', fields: ['데이터처리', '파이프라인'], interestFields: ['데이터처리', '파이프라인', '모델학습', '오픈소스'], tags: ['#MLOps', '#파이프라인', '#오픈소스'], bio: '의료 AI 데이터 파이프라인 구축 경험이 있습니다.' }] },
+      profile: { affiliation: '네이버헬스', job: '데이터 엔지니어', level: '중급', fields: ['데이터처리', '파이프라인'], interestFields: ['데이터처리', '파이프라인', '모델학습', '오픈소스'], tags: ['#MLOps', '#파이프라인', '#오픈소스'], bio: '의료 AI 데이터 파이프라인 구축 경험이 있습니다.' } },
   ];
+
+  const filteredProfileParticipants = mockParticipants.filter(p =>
+    !profileSearch || p.name.includes(profileSearch) || p.email.includes(profileSearch)
+  );
 
   // 행사 > 프로그램 > 세션 > 트랙 구조 mock data
   const [programs, setPrograms] = useState([
@@ -6645,7 +6652,7 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
     return (
       <div>
         <div className="detail-header" style={{marginBottom:14}}>
-          <button className="back-btn" onClick={() => setSelected(null)}>←</button>
+          <button className="back-btn" onClick={() => { setSelected(null); setProfileSearch(''); }}>←</button>
           <h2 style={{fontSize:18,fontWeight:700,color:'#1E2832',flex:1}}>{selected.name}</h2>
           <Chip type={statusMap[selected.status]} />
 
@@ -6774,7 +6781,7 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
               </span>
             </div>
             <table>
-              <thead><tr><th>이름</th><th>이메일</th><th>신청일</th><th>승인 상태</th></tr></thead>
+              <thead><tr><th>이름</th><th>이메일</th><th>신청일</th><th>승인 상태</th><th>지식프로필</th></tr></thead>
               <tbody>
                 {mockParticipants.map((p, i) => (
                   <tr key={i}>
@@ -6782,6 +6789,14 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
                     <td style={{fontSize:12.5,color:'#4A5568'}}>{p.email}</td>
                     <td style={{fontSize:12.5,color:'#4A5568'}}>{p.applied}</td>
                     <td><Chip type={p.status} label={p.status} /></td>
+                    <td>
+                      {p.profile ? (
+                        <button className="btn-link" style={{fontWeight:700,color:'#2F855A'}}
+                          onClick={() => { setTab('청중 지식프로필'); setProfileSearch(p.name); }}>Y</button>
+                      ) : (
+                        <span style={{color:'#CBD5E0',fontWeight:700}}>N</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -6792,9 +6807,15 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
         {tab === '청중 지식프로필' && (
           <div>
             <div style={{fontSize:12.5,color:'#718096',marginBottom:14,padding:'8px 12px',background:'#F0F4F5',borderRadius:6}}>
-              청중 네트워킹은 행사 단위로 운영됩니다. 각 참가자의 지식프로필(프로그램별)을 확인하세요.
+              청중 네트워킹은 행사 단위로 운영됩니다. 참가자당 지식프로필은 하나이며, 참여한 프로그램과 무관하게 동일하게 적용됩니다.
             </div>
-            {mockParticipants.map((p, i) => (
+            <input className="search-input" placeholder="이름 또는 이메일로 검색"
+              value={profileSearch} onChange={e => setProfileSearch(e.target.value)}
+              style={{marginBottom:14,width:260}} />
+            {filteredProfileParticipants.length === 0 && (
+              <div className="empty-state">검색 결과가 없습니다.</div>
+            )}
+            {filteredProfileParticipants.map((p, i) => (
               <div key={i} className="card" style={{marginBottom:12}}>
                 <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:12}}>
                   <div>
@@ -6803,21 +6824,20 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
                   </div>
                   <Chip type={p.status} label={p.status} />
                 </div>
-                {p.profiles.map((prof, pi) => (
-                  <div key={pi} style={{background:'#F9FAFB',borderRadius:8,padding:'12px 14px',marginBottom: pi < p.profiles.length - 1 ? 8 : 0}}>
-                    <div style={{fontSize:11.5,fontWeight:600,color:'#36454F',marginBottom:10,paddingBottom:6,borderBottom:'1px solid #E2E8F0'}}>
-                      📋 {prof.program}
-                    </div>
+                {!p.profile ? (
+                  <div style={{fontSize:12.5,color:'#9CA3AF',fontStyle:'italic'}}>지식프로필 미등록</div>
+                ) : (
+                  <div style={{background:'#F9FAFB',borderRadius:8,padding:'12px 14px'}}>
                     <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'6px 20px',fontSize:13}}>
-                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>소속</span><span className="field-value">{prof.affiliation}</span></div>
-                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>직업/직위</span><span className="field-value">{prof.job}</span></div>
-                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>수준</span><span className="field-value">{prof.level}</span></div>
+                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>소속</span><span className="field-value">{p.profile.affiliation}</span></div>
+                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>직업/직위</span><span className="field-value">{p.profile.job}</span></div>
+                      <div className="field-row" style={{marginBottom:4}}><span className="field-label" style={{minWidth:80}}>수준</span><span className="field-value">{p.profile.level}</span></div>
                     </div>
                     <div style={{marginTop:8}}>
                       <div style={{fontSize:12,color:'#718096',marginBottom:4}}>관심 분야 <span style={{fontSize:11,color:'#9CA3AF'}}>(★ = 전문 분야)</span></div>
                       <div style={{display:'flex',flexWrap:'wrap',gap:5}}>
-                        {prof.interestFields.map((f, fi) => {
-                          const isExpert = prof.fields.includes(f);
+                        {p.profile.interestFields.map((f, fi) => {
+                          const isExpert = p.profile.fields.includes(f);
                           return (
                             <span key={fi} style={{padding:'2px 9px',borderRadius:12,fontSize:12,fontWeight:500,
                               background: isExpert ? '#36454F' : '#EDF2F7',
@@ -6829,23 +6849,23 @@ function EventsPage({ preSelectEventId, onClearPreSelect, preSelectStatusFilter,
                         })}
                       </div>
                     </div>
-                    {prof.tags.length > 0 && (
+                    {p.profile.tags.length > 0 && (
                       <div style={{marginTop:8}}>
                         <div style={{fontSize:12,color:'#718096',marginBottom:4}}>관심 태그</div>
                         <div style={{display:'flex',flexWrap:'wrap',gap:5}}>
-                          {prof.tags.map((t, ti) => (
+                          {p.profile.tags.map((t, ti) => (
                             <span key={ti} style={{padding:'2px 9px',borderRadius:12,fontSize:12,background:'#EBF4FF',color:'#2B6CB0',border:'1px solid #BFDBFE'}}>{t}</span>
                           ))}
                         </div>
                       </div>
                     )}
-                    {prof.bio && (
+                    {p.profile.bio && (
                       <div style={{marginTop:8,fontSize:12.5,color:'#4A5568',lineHeight:1.6,paddingTop:8,borderTop:'1px solid #EDF2F7'}}>
-                        {prof.bio}
+                        {p.profile.bio}
                       </div>
                     )}
                   </div>
-                ))}
+                )}
               </div>
             ))}
           </div>
